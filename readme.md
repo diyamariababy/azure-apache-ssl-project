@@ -28,7 +28,7 @@ This project showcases my ability to:
 - Chose **Standard B1s** SKU for basic demo setup
 - Enabled **inbound ports 22 (SSH), 80 (HTTP), and 443 (HTTPS)** using Network Security Group (NSG) rules
 
-> Screenshot: ![VM Created](./azure-apache-ssl-project/Screesnshots/VM%20Created.png)
+> Screenshot: ![VM Created](./azure-apache-ssl-project/screenshots/VM%20Created.png)
 
 ---
 
@@ -39,7 +39,7 @@ sudo apt install apache2 -y
 ### Confirmed Apache was running using 
 sudo systemctl status apache2
 
-> Screenshot: ![Apache Installation](./azure-apache-ssl-project/Screesnshots/Apache%20Installation.png)
+> Screenshot: ![Apache Installation](./azure-apache-ssl-project/screenshots/Apache%20Installation.png)
 
 ### 3. Set Up Custom Domain
 Purchased domain azuredevopsk.xyz from GoDaddy
@@ -48,7 +48,7 @@ A   @     → <VM_Public_IP>
 A   www   → <VM_Public_IP>
 CNAME www → azuredevopsk.xyz (optional)
 
-> Screenshot: ![Custom Domain](./azure-apache-ssl-project/Screesnshots/Custom%20Domain.png)
+> Screenshot: ![Custom Domain](./azure-apache-ssl-project/screenshots/Custom%20Domain.png)
 
 ### 4. Installed Certbot & Obtained SSL Certificate
 sudo apt install certbot python3-certbot-apache -y
@@ -59,8 +59,8 @@ sudo certbot --apache -d azuredevopsk.xyz -d www.azuredevopsk.xyz
 Chose option to redirect HTTP to HTTPS
 SSL was installed successfully
 
-> Screenshot: ![Certificate Installation](./azure-apache-ssl-project/Screesnshots/Certificate%20Installation.png)
-> Screenshot: ![Certificate](./azure-apache-ssl-project/Screesnshots/Certificate.png)
+> Screenshot: ![Certificate Installation](./azure-apache-ssl-project/screenshots/Certificate%20Installation.png)
+> Screenshot: ![Certificate](./azure-apache-ssl-project/screenshots/Certificate.png)
 
 ### 5. Security Hardening (Optional)
 *Edited SSH configuration:*
@@ -76,13 +76,13 @@ Accessed https://azuredevopsk.xyz in browser
 Saw valid SSL certificate from Let's Encrypt
 Site automatically redirected from HTTP to HTTPS
 
-Screenshot: ![HTTPS Verification](./azure-apache-ssl-project/Screesnshots/HTTPS%20Verification.png)
+Screenshot: ![HTTPS Verification](./azure-apache-ssl-project/screenshots/HTTPS%20Verification.png)
 
 ### 7. Custom Webpage (Optional)
 can host your own simple HTML:
 echo "<h1>Hello Secure Web World</h1>" | sudo tee /var/www/html/index.html
 
-> Screesnshot: ![Custom Webpage](./azure-apache-ssl-project/Screesnshots/Custom%20Webpage.png)
+> Screesnshot: ![Custom Webpage](./azure-apache-ssl-project/screenshots/Custom%20Webpage.png)
 
 ### Conclusion
 This project allowed me to apply and reinforce real-world Azure and Linux skills, from VM provisioning to SSL configuration. It showcases my ability to deploy and secure infrastructure in the cloud—an essential skill in cloud and DevOps roles.
